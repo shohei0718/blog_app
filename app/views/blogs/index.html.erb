@@ -2,5 +2,7 @@
     <% @blogs.each do |blog| %>
       <%= render partial: "blog", locals: {blog: blog} %>
     <% end %>
-  <%= paginate(@blogs) %>
+      <footer class="under_line">
+        <%= paginate(@blogs) %>
+      </footer>
 </div>

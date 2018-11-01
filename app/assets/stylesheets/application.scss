@@ -9,12 +9,27 @@ h1,h2,h3,h4,h5,h6,p {
  margin: 0;
 }
 
-nav.yellow {
-  min-width: 800px;
+h2.str {
+  font-size: 25px;
+  margin-left: 320px;
+}
+
+.str {
+  margin-left:320px;
+}
+
+.actions {
+  padding: 20px 0 20px 320px;
+}
+
+.field {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .contents {
   min-width: 800px;
+  padding-top: 40px;
 }
 
 .brand-logo {
@@ -33,16 +48,19 @@ nav.yellow {
 }
 
 .content_post {
-  margin: 30px, auto, 30px;
+
   width: 800px;
   margin: 0 auto;
+}
+
+.more {
+  padding-top: 40px;
 }
 
 .more_list {
   background-color: #FFFFEF;
   border: ridge;
   border-radius: 5px;
-  margin-top: 18px;
 }
 
 .list_bar {
@@ -60,6 +78,17 @@ nav.yellow {
 
 }
 
+
+.new_user {
+  padding-top: 80px;
+}
+
+.new_blog {
+  padding-top: 150px;
+  width: 800px;
+  margin: 0 auto;
+}
+
 .success {
   text-align: center;
 }
@@ -68,3 +97,14 @@ nav.yellow {
   font-size: 20px;
 }
 
+nav.pagination {
+  background-color: #FFA07A;
+  float: bottom;
+}
+
+footer.under_line {
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+
+}

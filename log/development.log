@@ -11663,3 +11663,2769 @@ Processing by BlogsController#index as HTML
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
   Rendered blogs/index.html.erb within layouts/application (74.2ms)
 Completed 200 OK in 400ms (Views: 375.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 14:59:20 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BlogsController#new as HTML
+  Rendered blogs/new.html.erb within layouts/application (15.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 258ms (Views: 231.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:03:36 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (3.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:09:01 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:09:02 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.8ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs/31" for 127.0.0.1 at 2018-11-01 15:09:06 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"authenticity_token"=>"mz+XHUeo4y3its+A0F8OGTNM9KOIiTuDPIrS4rrfUBZwdvOB3/U2xgT3bqxBv3Jq/MreGE1lxoB9VvFPx5sdpA==", "id"=>"31"}
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 31 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/31/edit" for 127.0.0.1 at 2018-11-01 15:09:10 +0900
+Processing by BlogsController#edit as HTML
+  Parameters: {"authenticity_token"=>"mz+XHUeo4y3its+A0F8OGTNM9KOIiTuDPIrS4rrfUBZwdvOB3/U2xgT3bqxBv3Jq/MreGE1lxoB9VvFPx5sdpA==", "id"=>"31"}
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 31 LIMIT 1
+  Rendered blogs/edit.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/31" for 127.0.0.1 at 2018-11-01 15:09:17 +0900
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mz+XHUeo4y3its+A0F8OGTNM9KOIiTuDPIrS4rrfUBZwdvOB3/U2xgT3bqxBv3Jq/MreGE1lxoB9VvFPx5sdpA==", "id"=>"31"}
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 31 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `blogs` WHERE `blogs`.`id` = 31[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  Rendered blogs/destroy.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:09:19 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.0ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs/30/edit" for 127.0.0.1 at 2018-11-01 15:09:21 +0900
+Processing by BlogsController#edit as HTML
+  Parameters: {"authenticity_token"=>"j+uo2tSYyJFxMO7wEp/PpEboyG8B3KecDrbsRsoMIY1kosxGTMUdepdxT9yDf7PXiW7i1MQwWp9Pas/rt0hsPw==", "id"=>"30"}
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 30 LIMIT 1[0m
+  Rendered blogs/edit.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/blogs/30" for 127.0.0.1 at 2018-11-01 15:09:23 +0900
+Processing by BlogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CY6fpL+s3xVox5nixFlwFhedIQVLTqXcwEkFu48U2Frix/s4J/EK/o6GOM5VuQxl2BsLvo6iWN+BlSYW8lCV6A==", "blog"=>{"text"=>"詳細画面の投稿も完了できた"}, "commit"=>"編集する", "id"=>"30"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 30 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:09:23 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:10:29 +0900
+Processing by BlogsController#new as HTML
+  Parameters: {"authenticity_token"=>"YCzoKXo9H7KGZUeWVb+azHVr8HynRDiS9aFFHx0q3baLZYy14mDKWWAk5rrEX+a/uu3ax2KoxZG0fWayYG6QBA=="}
+  Rendered blogs/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:10:31 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.1ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-01 15:10:32 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0rxJEK8C8xBuzWZDwik7mDDbQ5072ebrjjHCPPgtmKQ59S2MN18m+4iMx29TyUfr/11pJv41G+jP7eGRhWnVFg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:10:32 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (5.0ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:10:33 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:12:26 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a67a2b90ab9bf1a191d9e1c4e6a1eca88e4e51e9e6e8314e601784d571fb9809.css?body=1" for 127.0.0.1 at 2018-11-01 15:12:26 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:13:00 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a4d41759337f5367c3a9b2075557cb1cf89a7739b823fa69c80f99c0583de155.css?body=1" for 127.0.0.1 at 2018-11-01 15:13:01 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:13:09 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a813e9d793939f58fe47ffa20651b71f80c197914e3206b460e07e0221add353.css?body=1" for 127.0.0.1 at 2018-11-01 15:13:09 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:14:09 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6a578c8360bff9df36aa25bee980b785462b714eb11cf5d51c09c204fee892e8.css?body=1" for 127.0.0.1 at 2018-11-01 15:14:09 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:14:50 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-11ab34b49d3d7907a696c70092c91db2d47da043562ddf57a6ba8a9b3af10938.css?body=1" for 127.0.0.1 at 2018-11-01 15:14:51 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:15:01 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-46eb3e14f472e5fb86372fdde8a5ef018b473c67b762c6968afbe57d18ffbebb.css?body=1" for 127.0.0.1 at 2018-11-01 15:15:01 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:15:12 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 52ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-53803f550e837254ccf6e1e5013e4b0e89c764e427835e0bbcd681b49fd4a94b.css?body=1" for 127.0.0.1 at 2018-11-01 15:15:12 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:15:23 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (1.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:15:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:16:09 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:18:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c0520ad34564376e94f6ca9e2a6cb78b99c63422342f302a9ad7f5c36d8e27e1.css?body=1" for 127.0.0.1 at 2018-11-01 15:18:11 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:18:56 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b243a55af2d4c16b51e1ba68c3fcea0c989b3bf146ab03c4d28aa4a9ab5a9e64.css?body=1" for 127.0.0.1 at 2018-11-01 15:18:56 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:19:30 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d9e29ce5fbcaaa775e2edfac637380bb7498196e60b9a1ad8fa67953b7177809.css?body=1" for 127.0.0.1 at 2018-11-01 15:19:30 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:19:52 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-24140f1a61809240c54978b066610e6c94e13cd0a266a22cd50d9658acd6ae60.css?body=1" for 127.0.0.1 at 2018-11-01 15:19:52 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:20:08 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b2c84f43f510e7aced810a250e22f9dcaf64abc60fe09b9758cac85a9efe88f6.css?body=1" for 127.0.0.1 at 2018-11-01 15:20:08 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:20:34 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a5d807e92401ab6ec3f951f58a1c26341be64c3ca09f4e19d6f3009970ae9b17.css?body=1" for 127.0.0.1 at 2018-11-01 15:20:34 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:21:44 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5cd8bb12ba04e6c75cb8ffefac6dd40359bceff3a93aa181810fdbf68234f4d8.css?body=1" for 127.0.0.1 at 2018-11-01 15:21:44 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:21:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-401eff961012093dd353500edee6205e772769363ec8223318544c090a474b1d.css?body=1" for 127.0.0.1 at 2018-11-01 15:21:59 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:23:02 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4643341beecb2f00a535ed712001cec1402cc31c35697cb06fd11ba6b084244e.css?body=1" for 127.0.0.1 at 2018-11-01 15:23:03 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:23:12 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a508304f9594bb9c206f82c9fcd3a36bf7e012eebdea3f75703454530ae2affb.css?body=1" for 127.0.0.1 at 2018-11-01 15:23:12 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:23:26 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (1.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:23:31 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:23:34 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:23:39 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:23:46 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:23:48 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:23:56 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/30" for 127.0.0.1 at 2018-11-01 15:23:59 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"authenticity_token"=>"Fjcy9MjJ93kKQSOHRXSXmpN3XwSMJ/JsurznSdCuTrij8ft6YWdvxLXE7v2FbHo15FWSP4AtLLH05GlKrwzx3A==", "id"=>"30"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 30 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:24:01 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.5ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/28" for 127.0.0.1 at 2018-11-01 15:24:04 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"authenticity_token"=>"ndqtFZYtcq1q3KyQbppxe27qsNnyjM5VX852YrrOtA8oHGSbP4PqENVZYequgpzUGch94v6GEIgRlvhhxWwLaw==", "id"=>"28"}
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 28 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered blogs/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:24:11 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (1.3ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:25:26 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-8b30b9a93cd1b52888816a1ba398d1cda6462ebb00e7b3849515d67f478d495b.css?body=1" for 127.0.0.1 at 2018-11-01 15:25:26 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:25:34 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:25:42 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:25:44 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.5ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:25:49 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:26:18 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-fd88e2cf169076c08077678f8a637f64bccb337a2d297b0f2eadd4e895cb617a.css?body=1" for 127.0.0.1 at 2018-11-01 15:26:19 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:26:56 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (2.8ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.8ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 109ms (Views: 104.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:27:06 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-514c6bffe7b89a884e893f2aa2a37f5853c90432912016c6b2defb04340c5fb3.css?body=1" for 127.0.0.1 at 2018-11-01 15:27:06 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:27:18 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-d2d8222e56166375847350f8c996aad3f428dd1c2d9a0d3b80adbc3f7279f3b1.css?body=1" for 127.0.0.1 at 2018-11-01 15:27:19 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:28:10 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-f44d507461cfffd7d50b4b99df0e72b376c23cae9a208bbd843f3c1e9f277d2f.css?body=1" for 127.0.0.1 at 2018-11-01 15:28:10 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:29:02 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-8559c7a91fc895d5dc222e77f32371bb4ac1efca67a9f6136a03abc390592d58.css?body=1" for 127.0.0.1 at 2018-11-01 15:29:02 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:29:10 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (1.3ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:29:23 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:29:42 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:29:59 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e0b3c513e16a035ef2c08c3c58aa52ce76b315233c7f045da92269f68dc9b511.css?body=1" for 127.0.0.1 at 2018-11-01 15:30:00 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:30:41 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-2e72a7048f864068253f74732586e224fef5169e63b8ceed823c71ffffd33036.css?body=1" for 127.0.0.1 at 2018-11-01 15:30:41 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:32:30 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-dc9ccb9b22500b82e00b322bfbc4c7bf4c0cd902b0ea5a94b98c311a6ce605f2.css?body=1" for 127.0.0.1 at 2018-11-01 15:32:30 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:32:35 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-f6500ff0f0409657b4c4e967b7336efc3e8591c3c64f2fdfb621f15ae7402e6a.css?body=1" for 127.0.0.1 at 2018-11-01 15:32:35 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:33:19 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 60ms (Views: 48.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:33:27 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:33:34 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:33:36 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:33:39 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:33:40 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:02 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-62ec52b8115ff0b1e8bd9f7851ba144a28aca964bfbc4d9613d6c1b764ebd952.css?body=1" for 127.0.0.1 at 2018-11-01 15:35:02 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:35:09 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:35:11 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (1.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:15 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:35:16 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:18 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:35:23 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:24 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:42 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fc9635691fda302ca2cef16d232ca25a0d014c9843057ad768d18abc01038e8b.css?body=1" for 127.0.0.1 at 2018-11-01 15:35:42 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:35:46 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:35:48 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:35:52 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:36:02 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XsIOMz6o/I0BP4jmJbRc82gU0on5YfymLR3trPgNQD/rBMe9lwZkML66RZzlrLFcHzYfsvVrIntjRWOvh6//Ww==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:36:02 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:36:06 +0900
+Processing by BlogsController#new as HTML
+  Parameters: {"authenticity_token"=>"/JagaY7fuwrRHLheOYRWXssPUIfQeQwb/Q3N8fPp81GCjcEHtHML6burKNEGMigY4cLBL2HuNYmJbEY3kfv3wA=="}
+  Rendered blogs/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:36:41 +0900
+Processing by BlogsController#new as HTML
+  Rendered blogs/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-fd0d0662caeb5a73ed2594916d80c8ec22ab0cde344b70492a82b17653637b72.css?body=1" for 127.0.0.1 at 2018-11-01 15:36:41 +0900
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:36:49 +0900
+Processing by BlogsController#new as HTML
+  Rendered blogs/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-3d664b6a856f777bf93f43663a1bea92009fc5d64ad82f15ce2724f92fd29833.css?body=1" for 127.0.0.1 at 2018-11-01 15:36:50 +0900
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:36:57 +0900
+Processing by BlogsController#new as HTML
+  Rendered blogs/new.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-1596c59b53abe7d93d4ac3c6220e31e2005a736d2fba966f2723895f2539fafa.css?body=1" for 127.0.0.1 at 2018-11-01 15:36:57 +0900
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:37:16 +0900
+Processing by BlogsController#new as HTML
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-f3201eb335204b838611a7d7b8204c4457a98fd586368f4cd8dfd95a9501c484.css?body=1" for 127.0.0.1 at 2018-11-01 15:37:16 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:37:31 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:40:38 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:40:54 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:41:10 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:41:30 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:42:04 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-79d9bc36c3a9c13e5f4238ce59ea1007acee100cfaaf34616c3171201f40dae2.css?body=1" for 127.0.0.1 at 2018-11-01 15:42:04 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:42:08 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.1ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:42:17 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:42:52 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-afd3629ccb8d714ada5ff98c9a78c840f42d72d586fe18b321413dff6ebc40e4.css?body=1" for 127.0.0.1 at 2018-11-01 15:42:52 +0900
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:43:06 +0900
+Processing by BlogsController#new as HTML
+  Parameters: {"authenticity_token"=>"cZ+Dz6+qaWNvqYkpFGTYTzeIV6qOYemWfGLCZansf5wPhOKhlQbZgAUeGaYr0qYJHUXGAj/20AQIA0mjy/57DQ=="}
+  Rendered blogs/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2018-11-01 15:43:28 +0900
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z80TW2UhLu0wMBtWWnjHtWhzkOtCyGwSO9GFpagD30Cx1nI1X42eDlqHi9llzrnzQr4BQ/NfVYBPsA5jyhHb0Q==", "blog"=>{"text"=>"ブログ作成"}, "commit"=>"投稿する"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `blogs` (`text`, `user_id`, `created_at`, `updated_at`) VALUES ('ブログ作成', 1, '2018-11-01 06:43:28', '2018-11-01 06:43:28')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:43:28 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (4.2ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 100ms (Views: 97.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:43:44 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:45:13 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:45:22 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:46:02 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 90ms (Views: 87.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.self-e0e35685ba100358bd1b9c94e5762a6e7902557920cf3e632bd09a57958d7971.css?body=1" for 127.0.0.1 at 2018-11-01 15:46:02 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:46:09 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:46:24 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e574e7a10cf64864c5705bba564a0b4b152346133a9b1cc1de95ae685855cf8a.css?body=1" for 127.0.0.1 at 2018-11-01 15:46:24 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:46:28 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.2ms)
+  Rendered blogs/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:47:19 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:47:28 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 92ms (Views: 90.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:47:36 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:49:49 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:49:54 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:51:17 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.5ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 92ms (Views: 90.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-3bf16a3e8b9eb37763e4ff6a364b8f235445f799b4fed732b72a229cdad3e0b1.css?body=1" for 127.0.0.1 at 2018-11-01 15:51:17 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:51:33 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 97ms (Views: 95.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-faf031c017ae6c46e28a911eda7987e03ab02a67a1bea687a12a09af6159d018.css?body=1" for 127.0.0.1 at 2018-11-01 15:51:33 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:51:38 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-57ad243e1ed37b7ed029dcc10cef8ad1bc2cd773e6195f1ef5a7f3aa8eb236f5.css?body=1" for 127.0.0.1 at 2018-11-01 15:51:38 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:51:42 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.3ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:52:16 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-32ee4f8b5726e0998d4428470e95f1b2b8e74f458cda7adda205b5cb9c571c95.css?body=1" for 127.0.0.1 at 2018-11-01 15:52:16 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:52:39 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:52:44 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:53:06 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.8ms)
+  Rendered blogs/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:53:17 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.7ms)
+  Rendered blogs/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:53:27 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.9ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:53:33 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.6ms)
+  Rendered blogs/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 15:53:37 +0900
+Processing by BlogsController#new as HTML
+  Parameters: {"authenticity_token"=>"5Qs0WI/ojFEQeQ5Mz0fQbXYqK5vqTmgX7H0C3Udz/BabEFU2tUQ8snrOnsPw8a4rXOe6M1vZUYWYHIkbJWH4hw=="}
+  Rendered blogs/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2018-11-01 15:53:43 +0900
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"goRWgfLznQovRoOpmqzbQxN1JRGNGj76Jr8YIPNDSkT8nzfvyF8t6UXxEyalGqUFObi0uTyNB2hS3pPmkVFO1Q==", "blog"=>{"text"=>"投稿完了！"}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `blogs` (`text`, `user_id`, `created_at`, `updated_at`) VALUES ('投稿完了！', 1, '2018-11-01 06:53:43', '2018-11-01 06:53:43')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:53:43 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.5ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (4.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:53:46 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:53:50 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.6ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 90ms (Views: 84.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-01 15:53:53 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5RRTaWIkm6wdihaIc26HcvoYIW5HkrqnCqAl6F2zasabDzIHWIgrT3c9hgdM2Pk00NWwxvYFgzV+wa4uP6FuVw=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:53:53 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (1.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:53:55 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:53:56 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:53:57 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.8ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:53:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:55:04 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-91a889532d338e5e786c4d5a37f9cf6cb53e969e99cfe0895cdbddfd39352e2b.css?body=1" for 127.0.0.1 at 2018-11-01 15:55:04 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:56:33 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5765045bc776a4db734996d4078eccc4866fd28f652f1fce3e17ec9e8cfdb5ff.css?body=1" for 127.0.0.1 at 2018-11-01 15:56:33 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:56:39 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:56:57 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:57:05 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"authenticity_token"=>"K8MyR+NnB8hoPmizxPeSQqsRVSIVyHbYmrkLS0L0/hXVvkfa4nqf3VSmgtPH2k1c6fDwEINdgZv8vVdfdi37fw==", "id"=>"33"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:58:33 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f78da0630e198b1f468c3e065f29dafb09aa855fd484eb0d460f66b5b5ad6e0b.css?body=1" for 127.0.0.1 at 2018-11-01 15:58:33 +0900
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:58:40 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-0b7f34dfa3c81b6b8388df0c453b927e7e8db99c088545eaffb2763da4952361.css?body=1" for 127.0.0.1 at 2018-11-01 15:58:40 +0900
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:58:51 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-6bcb2e97c54c8453edbb114bb6c3c666a921a1d6bb23af5de6b93c3e1fd20f92.css?body=1" for 127.0.0.1 at 2018-11-01 15:58:51 +0900
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:59:03 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-eefd789c67cf83cc1bc0014a650c737484eace64f2490636f3280c11ab4a25df.css?body=1" for 127.0.0.1 at 2018-11-01 15:59:03 +0900
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:59:10 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 15:59:22 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 15:59:26 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/blogs/33" for 127.0.0.1 at 2018-11-01 15:59:30 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"authenticity_token"=>"vcRiw7cnk6AYOe+Ijwwsyzs7s8FAYdWmEIvJPd+l7zxDuRdetjoLtSShBeiMIfPVedoW89b0IuV2j5Up63zqVg==", "id"=>"33"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 33 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered blogs/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:59:33 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:59:35 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 15:59:36 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 15:59:38 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 15:59:47 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:00:06 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-d66e473f804bc36a89b98e6bddb5d756d3a497f48665b328cd5210ab0524f69f.css?body=1" for 127.0.0.1 at 2018-11-01 16:00:06 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:00:12 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:00:27 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-96fff298c07e994b6b79de17090ba482c51822fb0c74385be2e9faf939d844b3.css?body=1" for 127.0.0.1 at 2018-11-01 16:00:28 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:00:36 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:00:39 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:00:40 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:00:41 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:00:42 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:00:46 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:00:48 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:01:27 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (1.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:01:36 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:01:47 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wo2K6993Vs1a/99zfEZWViUScWqIH5KCnIHQMVCf6Aik8P923mrO2GZnNRN/a4lIZ/PUWB6KZcH6hYwlZEbtYg==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:01:47 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:01:53 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (2.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:01:55 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (2.1ms)
+  Rendered blogs/_blog.html.erb (1.4ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/blogs/32" for 127.0.0.1 at 2018-11-01 16:01:58 +0900
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qBxtwfL9lcQY5oihL/0ElFbVoR5kQq6EDxlHmzcRUf6CvHqNmxYZpuJwV6vEz9ykTtDSEr/3vhl2xXfFXM/8qQ==", "id"=>"32"}
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 32 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `blogs` WHERE `blogs`.`id` = 32[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  Rendered blogs/destroy.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:02:00 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered blogs/_blog.html.erb (1.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-01 16:02:03 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pC8hEUoW715ZuieeAwfdwLzJCJfTY0R1erqMfl0NZt+OjzZdI/1jPKMs+JToNQXwpMx7mwjWVOgDZrwgNtPLiA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:02:03 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:02:05 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:02:13 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"omw92uE/Ehgqdt0v1oxD/cfHZcs4b7Wzb8d/qBismg8d5vTNYuISazhd0VGHE+kqIU9ORNLNxoifrM6S4rSFfQ==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:02:13 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered blogs/_blog.html.erb (1.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-11-01 16:02:16 +0900
+Processing by BlogsController#new as HTML
+  Parameters: {"authenticity_token"=>"2ssI7dDrq7mESGMpdiIC/EHjXIrAMVB9wC9t7vYX1PrsLMrQ2JRh3NTVblvH1UFcNorgek0dOWdLR1BWAYHncg=="}
+  Rendered blogs/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-01 16:02:21 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KWhQlCr7mU3rCzQytVtVxA6E0hEqxdud4yhlLf7Yp9gfj5KpIoRTKLuWOUAErBZkee1u4afpsodoQFiVCU6UUA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:02:21 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:02:22 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.5ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (1.3ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:02:25 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:02:26 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:02:49 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:02:55 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.5ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:02:57 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:02:57 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:03:17 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:03:20 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:03:58 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.8ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:04:02 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:04:09 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:04:10 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:04:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:04:12 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.8ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (2.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 112ms (Views: 106.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:04:53 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:05:58 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-afd9dcb690c7f7e0c2747ace3428af4e10ea286131003c57ad5114994be65ff3.css?body=1" for 127.0.0.1 at 2018-11-01 16:05:58 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:06:06 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0d3098bc36464c68b6e1a2e38f79c15939b0e57f304a098f31bfc8efe3b9a37d.css?body=1" for 127.0.0.1 at 2018-11-01 16:06:06 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:06:19 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:07:40 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.7ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:07:43 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:07:44 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:07:45 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (2.2ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (1.2ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:08:15 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-be2c88399e8713ba7ee943261c06bed7c371d1c0a225d9d3a7aa256cd84c1e0b.css?body=1" for 127.0.0.1 at 2018-11-01 16:08:15 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:08:19 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:08:19 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:08:21 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:09:03 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-85b8574f33d044784a0346b2574e01c3ceac0bd112ae6e4e49c7c3fe632b9493.css?body=1" for 127.0.0.1 at 2018-11-01 16:09:03 +0900
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:09:07 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:09:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:09:16 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.6ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:09:22 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.5ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:09:24 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:10:06 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-d8a3c657cbeb95a6752e791c65570066b1625f996f26b32310bac4db792c781b.css?body=1" for 127.0.0.1 at 2018-11-01 16:10:06 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:10:18 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-78e390aed16541045c8de5e94e9a48b2bc983562acece3d239717511fdc1db95.css?body=1" for 127.0.0.1 at 2018-11-01 16:10:18 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:10:34 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:10:42 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.1ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-fbbb1f4f8cbf2b836936f7dc31b3376d4019fc9128c784175f2baca94633de87.css?body=1" for 127.0.0.1 at 2018-11-01 16:10:42 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:11:58 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.3ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-c8d44e6d4bb8c055719c8dca13853684a562f6cf589055c12b5d898faff319b2.css?body=1" for 127.0.0.1 at 2018-11-01 16:11:58 +0900
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-11-01 16:12:09 +0900
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBlog Load (0.4ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-01 16:12:11 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:12:12 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-01 16:12:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-01 16:12:14 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:12:16 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)
+  Rendered blogs/_blog.html.erb (0.8ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  Rendered blogs/_blog.html.erb (0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `blogs`[0m
+  Rendered blogs/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-11-01 16:12:45 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  `blogs`.* FROM `blogs`  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 3, 2)[0m
+  Rendered blogs/_blog.html.erb (1.0ms)
+  Rendered blogs/_blog.html.erb (0.9ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.5ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.7ms)
+  Rendered blogs/_blog.html.erb (0.6ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `blogs`
+  Rendered blogs/index.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 100ms (Views: 86.0ms | ActiveRecord: 6.2ms)
